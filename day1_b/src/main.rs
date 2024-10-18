@@ -9,12 +9,15 @@ fn main() {
 
     let lists: Vec<&str> = file.split("\n\n").collect();
 
+    // Count the inventories of all elves
     let mut totals: Vec<usize> = lists.iter().map(|list| {
         list.lines().map(|line| line.parse::<usize>().unwrap()).sum()
     }).collect();
 
+    // Sort the inventories low->high
     totals.sort();
 
+    // Take the highest three and sum
     let total: usize = totals.iter().rev().take(3).sum();
 
     println!("{}", total)
