@@ -7,7 +7,7 @@ My solutions for [AdventofCode2022](https://adventofcode.com/2022) written in Ru
 You will have to provide your own puzzle.txt
 
 ```shell
-cd day1a
+cd day1_a
 open puzzle.txt
 cargo run --release
 ```
